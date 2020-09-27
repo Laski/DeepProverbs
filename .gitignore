@@ -1,2 +1,7 @@
 *.idea
 *.pyc
+.env
+*.bin
+*.json
+.ipynb_checkpoints
+corpus/*

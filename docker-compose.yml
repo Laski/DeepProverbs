@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+    twitbot:
+        image: twitbot
+        build: .
+        env_file: .env
+        volumes:
+          - .:/app
+        command: /bin/sh -c 'cd /app; python3 twitbot.py wait-and-tweet'
+        restart: always
