@@ -5,3 +5,5 @@
 *.json
 .ipynb_checkpoints
 corpus/*
+config.yml
+data/*
