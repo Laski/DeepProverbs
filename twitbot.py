@@ -67,6 +67,9 @@ class MyStreamListener(tweepy.StreamListener):
 
     def on_status(self, status):
         if status.author.id == 190461974:
+            if status.in_reply_to_status_id or status.is_quote_status:
+            	# do not consider replies or retweets
+            	return
             seconds = random.randint(60, 300)
             print(f"new tweet. will wait {seconds} seconds and then tweet")
             time.sleep(seconds)
