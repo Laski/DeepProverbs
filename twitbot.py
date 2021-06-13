@@ -54,8 +54,8 @@ def new_tweet_text(temperature=0.7):
     while len(generated_text) >= 280:
         generated_text = ai.generate_one(temperature=temperature)
 
-    if 'https://t.co' in generated_text:
-        generated_text = re.sub('https\:\/\/t\.co[\S]*', '', generated_text)
+    #if 'https://' in generated_text:
+    #    generated_text = re.sub('https\:\/\/t\.co[\S]*', '', generated_text)
 
     print(generated_text)
     return generated_text
